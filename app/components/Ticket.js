@@ -100,56 +100,57 @@ return(
       </div>
     </div>
     <div className=" mt-3">
-      <div className="w-full rounded-xl shadow-xl flex flex-col container mx-auto">
-        <div className="w-full h-full">
-          <div className="w-full h-12 flex justify-between items-center px-5">
-            <span className="text-tuaGreen font-semibold tracking-wide text-xl">Check and validation</span>
-          </div>
-          <div className="w-full h-full flex justify-center items-center">
-            <canvas ref={canvasRef} id="barcode"></canvas>
-          </div>
-          <p className="text-center font-bold text-xl">{RAND_QR_ID}</p>
-        </div>
-        <div className="w-full h-1/3 p-5 flex flex-col items-center justify-between">
-          <div className="flex justify-center items-center space-x-1">
-            <Image
-              priority
-              src={ZoomIcon}
-              alt="ZoomIcon"
-              className=" w-7"
-            />
-            <span>Zoom</span>
-          </div>
-          <div className="w-full flex items-center justify-between">
-            <div className="flex justify-center items-center gap-2">
-              <Image
-                priority
-                src={TimerIcon}
-                alt="TimerIcon"
-                className="w-7"
-              />
-              <div className="space-y-1">
-                <p>{timeFormat(now)}</p>
-                <div className="w-16 h-3.5 ring-2 ring-red-500 ring-offset-2 rounded-lg overflow-hidden">
-                  <div style={{ width: `${perc}%` }} className="h-full bg-red-400"></div>
-                </div>
-              </div>
+      <div className="container mx-auto">
+        <div className="flex flex-col rounded-xl shadow-xl w-full h-full">
+            <div className="w-full h-full">
+            <div className="w-full h-12 flex justify-between items-center px-5">
+                <span className="text-tuaGreen font-semibold tracking-wide text-xl">Check and validation</span>
             </div>
+            <div className="w-full h-full flex justify-center items-center">
+                <canvas ref={canvasRef} id="barcode"></canvas>
+            </div>
+            <p className="text-center font-bold text-xl">{RAND_QR_ID}</p>
+            </div>
+            <div className="w-full h-1/3 p-5 flex flex-col items-center justify-between">
             <div className="flex justify-center items-center space-x-1">
-              <Image
+                <Image
                 priority
-                src={PinIcon}
-                alt="PinIcon"
-                className="w-7"
-              />
-              <span>198</span>
+                src={ZoomIcon}
+                alt="ZoomIcon"
+                className=" w-7"
+                />
+                <span>Zoom</span>
             </div>
-          </div>
+            <div className="w-full flex items-center justify-between">
+                <div className="flex justify-center items-center gap-2">
+                <Image
+                    priority
+                    src={TimerIcon}
+                    alt="TimerIcon"
+                    className="w-7"
+                />
+                <div className="space-y-1">
+                    <p>{timeFormat(now)}</p>
+                    <div className="w-16 h-3.5 ring-2 ring-red-500 ring-offset-2 rounded-lg overflow-hidden">
+                    <div style={{ width: `${perc}%` }} className="h-full bg-red-400"></div>
+                    </div>
+                </div>
+                </div>
+                <div className="flex justify-center items-center space-x-1">
+                <Image
+                    priority
+                    src={PinIcon}
+                    alt="PinIcon"
+                    className="w-7"
+                />
+                <span>198</span>
+                </div>
+            </div>
+        </div>
         </div>
       </div>
     </div>
     
-    <div className="w-full container mx-auto mt-5">
      <div className="w-full container mx-auto mt-5">
   {/* First stripe */}
   <div className="overflow-hidden w-full">
@@ -186,7 +187,6 @@ return(
       ))}
     </div>
   </div>
-</div>
     </div>
     <div className="container mx-auto">
       <p className="text-tuaGreen font-semibold tracking-wide text-xl mt-2">Biglietto integrato a tempo unico</p>
