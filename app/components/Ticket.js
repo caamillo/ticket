@@ -58,7 +58,7 @@ const Ticket = ({ offset = 8 }) => {
 
       let [ da, mo, y ] = [
         d.getDate(),
-        d.getMonth(),
+        d.getMonth() + 1,
         d.getFullYear()
       ].map(el => String(el).padStart(2, '0'))
 
